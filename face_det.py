@@ -15,6 +15,7 @@ def detect(frame):
         for(ex, ey, ew, eh) in eyes:
             cv2.rectangle(Color_face, (ex, ey), (ex+ew, ey+eh), (0,255,0), 2)
         return frame
+
 image = imageio.imread('sample.jpg')
 image = detect(frame=image)
 imageio.imwrite('output.jpg', image)
